@@ -1,0 +1,86 @@
+name: Build FBref Offline Scraper (.exe + .dmg)
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: {}
+
+jobs:
+  build-windows:
+    name: Build Windows .exe
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Build EXE
+        run: |
+          pyinstaller --noconfirm --windowed --name "FBref Offline Scraper" fbref_scraper.py
+        shell: cmd
+
+      - name: Zip artifact
+        run: |
+          cd dist
+          powershell -Command "Compress-Archive -Path 'FBref Offline Scraper' -DestinationPath 'FBref_Offline_Scraper_Windows.zip'"
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: dist/FBref_Offline_Scraper_Windows.zip
+
+  build-macos:
+    name: Build macOS .dmg
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Build .app
+        run: |
+          pyinstaller --noconfirm --windowed --name "FBref Offline Scraper" fbref_scraper.py
+
+      - name: Install create-dmg
+        run: brew install create-dmg
+
+      - name: Create .dmg
+        run: |
+          mkdir -p release
+          rm -f "release/FBref_Offline_Scraper_macOS.dmg" || true
+          create-dmg \
+            --volname "FBref Offline Scraper" \
+            --icon-size 128 \
+            --window-pos 200 120 \
+            --window-size 600 400 \
+            --app-drop-link 450 200 \
+            "release/FBref_Offline_Scraper_macOS.dmg" \
+            "dist/FBref Offline Scraper.app"
+
+      - name: Upload Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: release/FBref_Offline_Scraper_macOS.dmg
