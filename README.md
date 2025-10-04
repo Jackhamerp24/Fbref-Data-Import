@@ -9,8 +9,7 @@ Offline-only desktop app to parse local FBref HTML files:
 
 # Instruction
 FBref does not provide an API, so you must manually download HTML files first.
-	•	Visit a player’s FBref page, for example:
-https://fbref.com/en/players/e7fcf289/Florian-Wirtz
+	•	Visit a player’s FBref page, for example: https://fbref.com/en/players/e7fcf289/Florian-Wirtz
 	•	Press ⌘ + S (Mac) or Ctrl + S (Windows)
 → Choose “Webpage, Complete” and save it to your computer.
 → This gives you a file like: Florian Wirtz Domestic League Stats, Goals, Records | FBref.com.html
