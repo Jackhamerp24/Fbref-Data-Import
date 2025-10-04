@@ -1,0 +1,14 @@
+Date,Day,Comp,Round,Venue,Result,Squad,Opponent,Start,Pos,Min,Performance_Gls,Performance_Ast,Performance_PK,Performance_PKatt,Performance_Sh,Performance_SoT,Performance_CrdY,Performance_CrdR,Performance_Touches,Performance_Tkl,Performance_Int,Performance_Blocks,Expected_xG,Expected_npxG,Expected_xAG,SCA_SCA,SCA_GCA,Passes_Cmp,Passes_Att,Passes_Cmp%,Passes_PrgP,Carries_Carries,Carries_PrgC,Take-Ons_Att,Take-Ons_Succ,Match Report
+2025-08-10,Sun,FA Community Shield,FA Community Shield,Neutral,D 2 (2)–2 (3),Liverpool,Crystal Palace,Y,AM,83.0,0.0,1.0,0.0,0.0,1.0,0.0,1.0,0.0,,,1.0,,,,,,,,,,,,,,,Match Report
+2025-08-15,Fri,Premier League,Matchweek 1,Home,W 4–2,Liverpool,Bournemouth,Y,"AM,FW",81.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,68.0,2.0,0.0,2.0,0.1,0.1,0.3,8.0,0.0,42.0,58.0,72.4,7.0,37.0,2.0,0.0,0.0,Match Report
+2025-08-25,Mon,Premier League,Matchweek 2,Away,W 3–2,Liverpool,Newcastle Utd,Y,AM,79.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,38.0,1.0,0.0,1.0,0.1,0.1,0.0,1.0,0.0,26.0,28.0,92.9,2.0,15.0,0.0,0.0,0.0,Match Report
+2025-08-31,Sun,Premier League,Matchweek 3,Home,W 1–0,Liverpool,Arsenal,Y,AM,88.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,41.0,2.0,1.0,1.0,0.2,0.2,0.1,2.0,0.0,20.0,30.0,66.7,5.0,20.0,2.0,3.0,3.0,Match Report
+2025-09-04,Thu,WCQ,First round,Away,L 0–2,de Germany,sk Slovakia,Y,AM,90.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,,,0.0,,,,,,,,,,,,,,,Match Report
+2025-09-07,Sun,WCQ,First round,Home,W 3–1,de Germany,nir Northern Ireland,Y,AM,90.0,1.0,0.0,0.0,0.0,2.0,2.0,0.0,0.0,,,0.0,,,,,,,,,,,,,,,Match Report
+2025-09-14,Sun,Premier League,Matchweek 4,Away,W 1–0,Liverpool,Burnley,Y,"AM,CM",86.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,0.0,81.0,1.0,1.0,2.0,0.2,0.2,0.2,7.0,0.0,48.0,64.0,75.0,8.0,45.0,7.0,2.0,0.0,Match Report
+2025-09-17,Wed,Champions Lg,League phase,Home,W 3–2,eng Liverpool,es Atlético Madrid,Y,"AM,LW",73.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,44.0,0.0,0.0,0.0,0.0,0.0,0.6,5.0,0.0,27.0,35.0,77.1,4.0,27.0,4.0,5.0,2.0,Match Report
+2025-09-20,Sat,Premier League,Matchweek 5,Home,W 2–1,Liverpool,Everton,N,LW,30.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,8.0,8.0,100.0,0.0,7.0,0.0,3.0,1.0,Match Report
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2025-09-27,Sat,Premier League,Matchweek 6,Away,L 1–2,Liverpool,Crystal Palace,Y,"LW,AM",73.0,0.0,0.0,0.0,0.0,2.0,1.0,0.0,0.0,54.0,0.0,0.0,2.0,0.5,0.5,0.1,3.0,0.0,38.0,45.0,84.4,6.0,27.0,4.0,4.0,2.0,Match Report
+2025-09-30,Tue,Champions Lg,League phase,Away,L 0–1,eng Liverpool,tr Galatasaray,Y,"AM,LW",90.0,0.0,0.0,0.0,0.0,3.0,1.0,0.0,0.0,52.0,1.0,0.0,0.0,0.4,0.4,0.1,3.0,0.0,35.0,42.0,83.3,6.0,35.0,1.0,4.0,1.0,Match Report
+,,,,,7-1-3,,,10/11,,863.0,1.0,1.0,0.0,0.0,17.0,7.0,2.0,0.0,389.0,7.0,3.0,8.0,1.4,1.4,1.4,31.0,0.0,244.0,310.0,78.7,38.0,213.0,20.0,21.0,9.0,

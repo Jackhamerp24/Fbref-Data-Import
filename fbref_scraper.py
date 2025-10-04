@@ -399,11 +399,13 @@ class MainWindow(QtWidgets.QMainWindow):
 
         OUT_DIR.mkdir(parents=True, exist_ok=True)
 
+        dirs_used = set()
         count = 0
         for i in indices:
             rec = self.records[i]
             per_source = OUT_DIR / sanitize_filename(rec.source_file.stem)
             per_source.mkdir(parents=True, exist_ok=True)
+            dirs_used.add(str(per_source.resolve()))
             base = f"{sanitize_filename(rec.source_file.stem)}__{sanitize_filename(rec.table_id)}.csv"
             fp = per_source / base
             try:
@@ -412,7 +414,24 @@ class MainWindow(QtWidgets.QMainWindow):
             except Exception as e:
                 QtWidgets.QMessageBox.warning(self, APP_NAME, f"Failed to save {fp.name}:\n{e}")
 
-        QtWidgets.QMessageBox.information(self, APP_NAME, f"Exported {count} CSV file(s) into:\n{OUT_DIR}")
+        # Decide which folder to open: if all exports went to one folder, open that; otherwise open OUT_DIR
+        if dirs_used:
+            if len(dirs_used) == 1:
+                folder_to_open = pathlib.Path(next(iter(dirs_used)))
+            else:
+                folder_to_open = OUT_DIR
+        else:
+            folder_to_open = OUT_DIR
+
+        msg = QtWidgets.QMessageBox(self)
+        msg.setWindowTitle(APP_NAME)
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        msg.setText(f"Exported {count} CSV file(s) into:\n{folder_to_open}")
+        btn_open = msg.addButton("Open Folder", QtWidgets.QMessageBox.AcceptRole)
+        btn_close = msg.addButton("Close", QtWidgets.QMessageBox.RejectRole)
+        msg.exec()
+        if msg.clickedButton() == btn_open:
+            QtGui.QDesktopServices.openUrl(QtCore.QUrl.fromLocalFile(str(folder_to_open)))
 
 # ------------- main -------------
 
