@@ -1,5 +1,5 @@
 # Fbref-Data-Import
-An app created by ChatGPT-5 that will help you scrape the data table from fbref.com
+An app runs on Python, created by ChatGPT-5 that will help you scrape the data table from fbref.com
 # FBref Offline Scraper (GUI)
 
 Offline-only desktop app to parse local FBref HTML files:
