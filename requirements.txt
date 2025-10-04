@@ -1,0 +1,4 @@
+PySide6
+pandas
+beautifulsoup4
+lxml
