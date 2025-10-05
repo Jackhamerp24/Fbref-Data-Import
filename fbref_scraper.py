@@ -430,8 +430,13 @@ class MainWindow(QtWidgets.QMainWindow):
         btn_open = msg.addButton("Open Folder", QtWidgets.QMessageBox.AcceptRole)
         btn_close = msg.addButton("Close", QtWidgets.QMessageBox.RejectRole)
         msg.exec()
+
+        # Use a short timer to ensure the dialog is fully closed before opening the folder.
+        # This improves reliability on macOS app bundles while remaining fine on Windows.
         if msg.clickedButton() == btn_open:
-            QtGui.QDesktopServices.openUrl(QtCore.QUrl.fromLocalFile(str(folder_to_open)))
+            QtCore.QTimer.singleShot(100, lambda: QtGui.QDesktopServices.openUrl(
+                QtCore.QUrl.fromLocalFile(str(folder_to_open))
+            ))
 
 # ------------- main -------------
 
