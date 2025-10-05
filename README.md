@@ -44,7 +44,7 @@ FBref does not provide an API. You must download each player's HTML page manuall
 2. Press `Ctrl + S` (Windows) or `Cmd + S` (Mac).  
 3. Choose “Webpage, Complete” and save the file to your computer.  
 4. Move the downloaded `.html` file into the `HTML` folder next to the app.
-5. 
+
 #### 2. Run the application
 When you start the program:
 - It automatically scans the `HTML` folder for FBref files.
